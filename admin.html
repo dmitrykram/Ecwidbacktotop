@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Back to top Button</title>
+</head>
+<body>
+	
+	<h1 style="font-family: Lato, sans-serif; color: #0a1c2e; display: flex; justify-content: center;">Settings</h1>
+	<div style = "display: flex; justify-content: center;">
+		<div style = "display: inline-block; margin: 30px;">	
+			<h3 style="font-family: Lato, sans-serif;  color: #0a1c2e">Choose color</h3>
+			
+			<input type="color" id="picker" oninput="colorchange()">
+			
+			<script type="text/javascript">
+			function colorchange() {
+				fun = document.getElementById("myBtn");
+				picker = document.getElementById("picker");
+				picker.addEventListener("picker", colorchange);
+				fun.style.backgroundColor = picker.value;
+			}
+			</script>
+		
+		</div>
+
+		<div style = "display: inline-block; margin: 30px;">
+			
+			<h3 style="font-family: Lato, sans-serif;  color: #0a1c2e">Input button text:</h3>
+			
+			<input type="text" id="butntext" placeholder="Back to top" oninput="textchange()">
+			
+			<script type="text/javascript">
+			function textchange() {
+				inptxt = document.getElementById("butntext");
+				fun = document.getElementById("myBtn");
+				inptxt.addEventListener("inptxt", textchange);
+				fun.textContent = inptxt.value;
+			}
+			</script>
+		
+		</div>
+
+		<div style = "display: inline-block; margin: 30px;">
+			
+			<h3 style="font-family: Lato, sans-serif;  color: #0a1c2e">Set opacity</h3>
+			
+			<input id="setopacity" type="range" min="0" max="1" step="0.01" value="0.5" oninput="setop()">
+			
+			<script type="text/javascript">
+			function setop() {
+				opacityset = document.getElementById("setopacity");
+				fun = document.getElementById("myBtn");
+				opacityset.addEventListener("inptxt", setop);
+				fun.style.opacity = opacityset.value;
+			}
+		</script>
+		</div>
+	</div>
+	<div style = "display: flex; justify-content: center;">	
+		<div style = "display: inline-block; margin: 30px;">
+			
+			<h3 style="font-family: Lato, sans-serif;  color: #0a1c2e">Set width</h3>
+			
+			<input id="setsize" type="range" min="30" max="300" step="10" value="1" oninput="setsz()">
+			
+			<script type="text/javascript">
+			function setsz() {
+				sizest = document.getElementById("setsize");
+				fun = document.getElementById("myBtn");
+				sizest.addEventListener("sizest", setsz);
+				fun.style.width = sizest.value + "px";
+			}
+		</script>
+		</div>
+
+		<div style = "display: inline-block; margin: 30px;">
+			
+			<h3 style="font-family: Lato, sans-serif;  color: #0a1c2e">Set height</h3>
+			
+			<input id="setgeight" type="range" min="20" max="160" step="5" value="1" oninput="sethg()">
+			
+			<script type="text/javascript">
+			function sethg() {
+				hgset = document.getElementById("setgeight");
+				fun = document.getElementById("myBtn");
+				hgset.addEventListener("hgset", sethg);
+				fun.style.height = hgset.value + "px";
+			}
+		</script>
+		</div>
+
+		<div style = "display: inline-block; margin: 30px;">
+			
+			<h3 style="font-family: Lato, sans-serif;  color: #0a1c2e">Set form</h3>
+			
+			<input id="setfor" type="range" min="0" max="100" step="3" value="0" oninput="setform()">
+			
+			<script type="text/javascript">
+			function setform() {
+				setf = document.getElementById("setfor");
+				fun = document.getElementById("myBtn");
+				setf.addEventListener("setf", setform);
+				fun.style.borderRadius = setf.value + "px";
+			}
+		</script>
+		</div>
+	</div>
+	
+	<div style="display: flex; justify-content: center;">
+		
+		<button onclick="topFunction()" id="myBtn" title="Back to top" style = "display: inline-block;">Back to top</button>
+	
+	</div>
+	
+	<div style = "display: flex; justify-content: center;">
+		
+		<button type="submit" class="btn">Submit</button>
+		
+		<style type="text/css">
+			#myBtn {
+				margin-top: 30px;
+				border: 0;
+				font-family: Lato, sans-serif;
+			}
+			.btn {
+				background-color: black;
+				color: white;
+				border-color: gray;
+				margin-top: 50px;
+				height: 30px;
+				width: 80px;
+				border-radius: 20px;
+			}
+		</style>
+	
+	</div>
+
+</body>
+</html>

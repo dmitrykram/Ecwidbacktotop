@@ -62,7 +62,7 @@
 			function setop() {
 				opacityset = document.getElementById("setopacity");
 				fun = document.getElementById("myBtn");
-				opacityset.addEventListener("inptxt", setop);
+				opacityset.addEventListener("opacityset", setop);
 				fun.style.opacity = opacityset.value;
 				opacityvalue = opacityset.value;
 			}
@@ -133,20 +133,12 @@
 		<button type="submit" class="btn" onclick="save()">Submit</button>
 		<script type="text/javascript">
 		function save() {
-			Ecwid.setAppPublicConfig(btncolor);
-			console.log('color saved!');
-			Ecwid.setAppPublicConfig(textvalue);
-			console.log('text saved!');
-			Ecwid.setAppPublicConfig(opacityvalue);
-			console.log('opacity saved!');
-			Ecwid.setAppPublicConfig(widthvalue);
-			console.log('width saved!');
-			Ecwid.setAppPublicConfig(heightvalue);
-			console.log('height saved!');						
-			Ecwid.setAppPublicConfig(borderrad);
-			console.log('border saved!');
-		}
-		</script>	
+			var mass = {"btncolor":btncolor , "textvalue":textvalue, "opacityvalue":opacityvalue, "widthvalue":widthvalue, "heightvalue":heightvalue, "borderrad":borderrad};
+			data = JSON.stringify(mass)	
+			EcwidApp.setAppPublicConfig(data, function conf(){
+			  console.log('Public app config saved!');
+		});};
+		</script>
 
 		
 		<style type="text/css">

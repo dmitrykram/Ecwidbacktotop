@@ -1,4 +1,5 @@
 var butn = document.createElement("button");
+console.log('Кнопка есть')
 butn.id = "myBtn";
 butn.onclick = "topFunction()";
 

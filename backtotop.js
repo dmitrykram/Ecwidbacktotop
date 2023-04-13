@@ -1,9 +1,3 @@
-EcwidApp.init({
-  app_id: "custom-app-64446204-2", // use your application client_id
-  autoloadedflag: true, 
-  autoheight: true
-});
-
 var butn = document.createElement("button");
 butn.id = "myBtn";
 butn.onclick = "topFunction()";

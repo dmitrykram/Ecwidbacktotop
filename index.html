@@ -7,7 +7,13 @@
 	<title>Back to top Button</title>
 </head>
 <body>
-	
+	<script type="text/javascript">
+			EcwidApp.init({
+	  			app_id: "custom-app-64446204-2", // use your application client_id
+				autoloadedflag: true, 
+				autoheight: true
+			});
+	</script>
 	<h1 style="font-family: Lato, sans-serif; color: #0a1c2e; display: flex; justify-content: center;">Settings</h1>
 	<div style = "display: flex; justify-content: center;">
 		<div style = "display: inline-block; margin: 30px;">	
@@ -16,6 +22,7 @@
 			<input type="color" id="picker" oninput="colorchange()" value = "#7a8aa3">
 			
 			<script type="text/javascript">
+				console.log("DONE");
 			function colorchange() {
 				fun = document.getElementById("myBtn");
 				picker = document.getElementById("picker");

@@ -2,7 +2,7 @@ var butn = document.createElement("button");
 butn.id = "myBtn";
 butn.onclick = "topFunction()";
 
-publicConfig = Ecwid.getAppPublicConfig('my-cool-app');
+publicConfig = Ecwid.getAppPublicConfig('custom-app-64446204-2');
 color = JSON.parse(publicConfig);
 console.log(color.btncolor);
 

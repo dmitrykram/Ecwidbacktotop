@@ -20,6 +20,7 @@
 				picker = document.getElementById("picker");
 				picker.addEventListener("picker", colorchange);
 				fun.style.backgroundColor = picker.value;
+				btncolor = picker.value;
 			}
 			</script>
 		
@@ -37,6 +38,7 @@
 				fun = document.getElementById("myBtn");
 				inptxt.addEventListener("inptxt", textchange);
 				fun.textContent = inptxt.value;
+				textvalue = inptxt.value;
 			}
 			</script>
 		
@@ -54,6 +56,7 @@
 				fun = document.getElementById("myBtn");
 				opacityset.addEventListener("inptxt", setop);
 				fun.style.opacity = opacityset.value;
+				opacityvalue = opacityset.value;
 			}
 		</script>
 		</div>
@@ -71,6 +74,7 @@
 				fun = document.getElementById("myBtn");
 				sizest.addEventListener("sizest", setsz);
 				fun.style.width = sizest.value + "px";
+				widthvalue = sizest.value + "px";
 			}
 		</script>
 		</div>
@@ -87,6 +91,7 @@
 				fun = document.getElementById("myBtn");
 				hgset.addEventListener("hgset", sethg);
 				fun.style.height = hgset.value + "px";
+				heightvalue = hgset.value + "px";
 			}
 		</script>
 		</div>
@@ -103,6 +108,7 @@
 				fun = document.getElementById("myBtn");
 				setf.addEventListener("setf", setform);
 				fun.style.borderRadius = setf.value + "px";
+				borderrad = setf.value + "px";
 			}
 		</script>
 		</div>
@@ -110,7 +116,7 @@
 	
 	<div style="display: flex; justify-content: center;">
 		
-		<button onclick="topFunction()" id="myBtn" title="Back to top" style = "display: inline-block;">Back to top</button>
+		<button id="myBtn" title="Back to top" style = "display: inline-block;">Back to top</button>
 	
 	</div>
 	
@@ -119,17 +125,17 @@
 		<button type="submit" class="btn" onclick="save()">Submit</button>
 		<script type="text/javascript">
 		function save() {
-			Ecwid.setAppPublicConfig(picker.value);
+			Ecwid.setAppPublicConfig(btncolor);
 			console.log('color saved!');
-			Ecwid.setAppPublicConfig(inptxt.value);
+			Ecwid.setAppPublicConfig(textvalue);
 			console.log('text saved!');
-			Ecwid.setAppPublicConfig(opacityset.value);
+			Ecwid.setAppPublicConfig(opacityvalue);
 			console.log('opacity saved!');
-			Ecwid.setAppPublicConfig(sizest.value);
+			Ecwid.setAppPublicConfig(widthvalue);
 			console.log('width saved!');
-			Ecwid.setAppPublicConfig(hgset.value);
+			Ecwid.setAppPublicConfig(heightvalue);
 			console.log('height saved!');						
-			Ecwid.setAppPublicConfig(setf.value);
+			Ecwid.setAppPublicConfig(borderrad);
 			console.log('border saved!');
 		}
 		</script>	

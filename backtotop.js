@@ -1,3 +1,7 @@
+var butn = document.createElement("button");
+butn.id = "myBtn";
+butn.onclick = "topFunction()";
+
 publicConfig = Ecwid.getAppPublicConfig('my-cool-app');
 color = JSON.parse(publicConfig);
 console.log(color.btncolor);
@@ -16,6 +20,14 @@ console.log(color.heightvalue);
 
 color = JSON.parse(publicConfig);
 console.log(color.borderrad);
+
+backbutton = document.getElementById("myBtn");
+backbutton.style.backgroundColor = color.btncolor;
+backbutton.style.textContent = color.textvalue;
+backbutton.style.opacity = color.opacityvalue;
+backbutton.style.width = color.widthvalue;
+backbutton.style.height = color.heightvalue;
+backbutton.style.borderRadius = color.borderrad;
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {

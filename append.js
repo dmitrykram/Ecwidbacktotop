@@ -1,7 +1,9 @@
-var butn = document.createElement("button");
-console.log('Кнопка есть');
-butn.id = "myBtn";
-document.getElementById("myBtn").innerHTML='<button onclick="topFunction()" id="myBtn" title="Back to top"></button>';
+let div = document.createElement('div');
+div.className = "myBtn";
+div.innerHTML = '<button onclick="topFunction()" id="myBtn" title="Back to top"></button>';
+div.style.cssText = 'position: fixed;bottom: -160px;right: -200px;z-index: 99;cursor: pointer;padding: 15px;font-size: 18px;'
+
+document.body.append(div);
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {

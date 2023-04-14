@@ -3,6 +3,7 @@ div.className = "myBtn";
 div.innerHTML = '<button onclick="topFunction()" id="myBtn" title="Back to top"></button>';
 
 backbutton = document.getElementById("myBtn");
+document.body.append(div);
 
 publicConfig = Ecwid.getAppPublicConfig('custom-app-64446204-2');
 color = JSON.parse(publicConfig);
@@ -20,8 +21,6 @@ console.log(color.borderrad);
 backbutton.style.borderRadius = color.borderrad;
 
 div.style.cssText = 'display: none;position: fixed;bottom: 73px;right: -5px;z-index: 99;cursor: pointer;padding: 15px;font-size: 18px;'
-
-document.body.append(div);
 
 
 window.onscroll = function() {scrollFunction()};

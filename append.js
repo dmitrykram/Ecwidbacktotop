@@ -1,7 +1,7 @@
 let div = document.createElement('div');
 div.className = "myBtn";
 div.innerHTML = '<button onclick="topFunction()" id="myBtn" title="Back to top"></button>';
-div.style.cssText = 'position: fixed;bottom: -160px;right: -200px;z-index: 99;cursor: pointer;padding: 15px;font-size: 18px;'
+div.style.cssText = 'position: fixed;bottom: 73px;right: -5px;z-index: 99;cursor: pointer;padding: 15px;font-size: 18px;'
 
 document.body.append(div);
 

@@ -1,9 +1,6 @@
 let div = document.createElement('div');
 div.className = "myBtn";
 div.innerHTML = '<button onclick="topFunction()" id="myBtn" title="Back to top"></button>';
-div.style.cssText = 'display: none;position: fixed;bottom: 73px;right: -5px;z-index: 99;cursor: pointer;padding: 15px;font-size: 18px;'
-
-document.body.append(div);
 
 backbutton = document.getElementById("myBtn");
 
@@ -20,7 +17,11 @@ backbutton.style.width = color.widthvalue;
 console.log(color.heightvalue);
 backbutton.style.height = color.heightvalue;
 console.log(color.borderrad);
-backbutton.style.borderRadius = color.borderrad; 
+backbutton.style.borderRadius = color.borderrad;
+
+div.style.cssText = 'display: none;position: fixed;bottom: 73px;right: -5px;z-index: 99;cursor: pointer;padding: 15px;font-size: 18px;'
+
+document.body.append(div);
 
 
 window.onscroll = function() {scrollFunction()};

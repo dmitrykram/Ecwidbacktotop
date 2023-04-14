@@ -5,31 +5,21 @@ div.style.cssText = 'display: none;position: fixed;bottom: 73px;right: -5px;z-in
 
 document.body.append(div);
 
+backbutton = document.getElementById("myBtn");
+
 publicConfig = Ecwid.getAppPublicConfig('custom-app-64446204-2');
 color = JSON.parse(publicConfig);
 console.log(color.btncolor);
-
-color = JSON.parse(publicConfig);
-console.log(color.textvalue);
-
-color = JSON.parse(publicConfig);
-console.log(color.opacityvalue);
-
-color = JSON.parse(publicConfig);
-console.log(color.widthvalue);
-
-color = JSON.parse(publicConfig);
-console.log(color.heightvalue);
-
-color = JSON.parse(publicConfig);
-console.log(color.borderrad);
-
-backbutton = document.getElementById("myBtn");
 backbutton.style.backgroundColor = color.btncolor;
+console.log(color.textvalue);
 backbutton.style.textContent = color.textvalue;
+console.log(color.opacityvalue);
 backbutton.style.opacity = color.opacityvalue;
+console.log(color.widthvalue);
 backbutton.style.width = color.widthvalue;
+console.log(color.heightvalue);
 backbutton.style.height = color.heightvalue;
+console.log(color.borderrad);
 backbutton.style.borderRadius = color.borderrad; 
 
 

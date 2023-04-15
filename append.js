@@ -2,11 +2,11 @@ let div = document.createElement('div');
 div.className = "myBtn";
 div.innerHTML = '<button onclick="topFunction()" id="myBtn" title="Back to top"></button>';
 
-backbutton = document.getElementById("myBtn");
+var backbutton = document.getElementById("myBtn");
 document.body.append(div);
 
 publicConfig = Ecwid.getAppPublicConfig('custom-app-64446204-2');
-color = JSON.parse(publicConfig);
+var color = JSON.parse(publicConfig);
 console.log(color.btncolor);
 backbutton.style.backgroundColor = color.btncolor;
 console.log(color.textvalue);

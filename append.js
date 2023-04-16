@@ -14,7 +14,7 @@ var color = JSON.parse(publicConfig);
 console.log(color.btncolor);
 backbutton.style.backgroundColor = color.btncolor;
 console.log(color.textvalue);
-backbutton.style.textContent = color.textvalue;
+backbutton.textContent = color.textvalue;
 console.log(color.opacityvalue);
 backbutton.style.opacity = color.opacityvalue;
 console.log(color.widthvalue);

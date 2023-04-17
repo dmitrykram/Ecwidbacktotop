@@ -9,7 +9,7 @@ document.getElementById("myBtn").style.cssText = 'display: none;position: fixed;
 
 var backbutton = document.getElementById("myBtn");
 
-publicConfig = Ecwid.getAppPublicConfig('back-to-top-button-dev');
+publicConfig = Ecwid.getAppPublicConfig('custom-app-64446204-2');
 var color = JSON.parse(publicConfig);
 console.log(color.btncolor);
 backbutton.style.backgroundColor = color.btncolor;

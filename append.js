@@ -4,7 +4,7 @@ div.innerHTML = '<button onclick="topFunction()" id="myBtn" title="Back to top">
 
 document.body.append(div);
 
-document.getElementById("myBtn").style.cssText = 'display: none;position: fixed;bottom: 73px;right: -22px;z-index: 99;cursor: pointer;padding: 15px;font-size: 18px;';
+document.getElementById("myBtn").style.cssText = 'display: none;position: fixed;bottom: 73px;right: 28px;z-index: 99;cursor: pointer;padding: 15px;font-size: 18px;';
 
 
 var backbutton = document.getElementById("myBtn");
